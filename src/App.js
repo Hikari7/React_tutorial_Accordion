@@ -1,6 +1,6 @@
 import React from "react";
 import Accordion from "./components/Accordion";
-import Search from "./components/search";
+import Search from "./components/Search";
 
 //Accordinon componentに伝達される
 const items = [
@@ -22,7 +22,7 @@ const items = [
 export default () => {
   return (
     <div>
-      <Search/>
+      <Search />
     </div>
   );
 };

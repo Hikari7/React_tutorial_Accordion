@@ -5,6 +5,8 @@ const Search = () => {
   const [term, setTerm] = useState("programming");
   const [results, setResults] = useState([]);
 
+  //useEffectの中にasync functionを呼ぶ
+  //第二引数は一つだけなので、[term]が変更される度に実行される
   useEffect(() => {
     const search = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
@@ -28,7 +30,7 @@ const Search = () => {
       <div key={result.pageid} className="item">
         <div className="content">
           <div className="header">{result.title}</div>
-          {result.snippet}
+          <span dangerouslySetInnerHTML={{ __html: result.snippet}}></span>
         </div>
       </div>
     );
