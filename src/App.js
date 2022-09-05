@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
 
 //Accordinon componentに伝達される
 const items = [
@@ -37,22 +38,11 @@ const options = [
 //items={items}はitemsという名前のpropsとして通信している
 export default () => {
   //userが現在選択されている項目を変更するたびに選択された項目を変更する、のでuseState使う
-  const [selected, setSelected] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
 
   //onSelectedChange=選択された状態の一部を更新する関数
   return (
     <div>
-      <button onClick={() => setShowDropdown(!showDropdown)}>
-        Toggle Dropdown
-      </button>
-      {showDropdown ? (
-        <Dropdown
-          selected={selected}
-          onSelectedChange={setSelected}
-          options={options}
-        />
-      ) : null}
+      <Translate />
     </div>
   );
 };
