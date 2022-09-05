@@ -4,7 +4,7 @@ import Convert from "./Convert";
 
 const options = [
   {
-    label: "Afrikaan",
+    label: "Afrikaans",
     value: "af",
   },
   {
@@ -14,6 +14,14 @@ const options = [
   {
     label: "Hindi",
     value: "hi",
+  },
+  {
+    label: "Dutch",
+    value: "nl",
+  },
+  {
+    label: "Japanese",
+    value: "ja",
   },
 ];
 
@@ -25,7 +33,7 @@ const Translate = () => {
     <div>
       <div className="ui form">
         <div className="field">
-          <label>Enter text</label>
+          <label>Enter Text</label>
           <input value={text} onChange={(e) => setText(e.target.value)} />
         </div>
       </div>
@@ -43,5 +51,3 @@ const Translate = () => {
 };
 
 export default Translate;
-
-// AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
