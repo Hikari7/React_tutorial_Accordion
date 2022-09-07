@@ -4,6 +4,10 @@ import Convert from "./Convert";
 
 const options = [
   {
+    label: "Italian",
+    value: "It",
+  },
+  {
     label: "Afrikaans",
     value: "af",
   },
@@ -22,6 +26,10 @@ const options = [
   {
     label: "Japanese",
     value: "ja",
+  },
+  {
+    label: "English",
+    value: "en",
   },
 ];
 

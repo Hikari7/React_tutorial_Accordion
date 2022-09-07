@@ -9,7 +9,7 @@ const Convert = ({ language, text }) => {
   //text propsが変更される度に実行する
   useEffect(() => {
     const timerId = setTimeout(() => {
-      //500m描画経過し、このタイマーをキャンセルしない限り、bouncetextのstateをtextに更新する
+      //500m描画経過し、このタイマーをキャンセルしない限り、bouncetextのstateをtcextに更新する
       setDebouncedText(text);
     }, 500);
 
